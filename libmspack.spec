@@ -2,7 +2,7 @@ Summary:	A library for Microsoft compression formats
 Summary(pl):	Biblioteka do formatów kompresji u¿ywanych przez Microsoft
 Name:		libmspack
 Version:	0.0.20040308alpha
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.kyz.uklinux.net/downloads/%{name}-%{version}.tar.gz
@@ -50,6 +50,8 @@ Statyczna biblioteka libmspack.
 
 %prep
 %setup -q
+
+sed -i -e 's/\*this\>/*/' mspack/mspack.h
 
 %build
 %configure
