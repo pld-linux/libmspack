@@ -8,7 +8,7 @@ Group:		Libraries
 Source0:	http://www.kyz.uklinux.net/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	4d8e967649df0f6ade83df7da4b7511c
 URL:		http://www.kyz.uklinux.net/libmspack/
-BuildRequires:	gcc >= 3.0
+BuildRequires:	gcc >= 5:3.0
 BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
