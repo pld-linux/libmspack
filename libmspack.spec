@@ -1,5 +1,5 @@
 Summary:	A library for Microsoft compression formats
-Summary(pl):	Biblioteka do formatÛw kompresji uøywanych przez Microsoft
+Summary(pl.UTF-8):   Biblioteka do format√≥w kompresji u≈ºywanych przez Microsoft
 Name:		libmspack
 Version:	0.0.20060920alpha
 Release:	1
@@ -17,35 +17,35 @@ archivers and dearchivers for Microsoft compression formats: CAB, CHM,
 HLP, KWAJ, LIT and SZDD. It is also designed to be easily embeddable,
 stable, robust and resource-efficient.
 
-%description -l pl
-Celem libmspack jest dostarczenie kompresorÛw i dekompresorÛw,
-archiwizerÛw i dearchiwizerÛw dla formatÛw kompresji uøywanych przez
-Microsoft: CAB, CHM, HLP, KWAJ, LIT i SZDD. Ponadto biblioteka zosta≥a
-zaprojektowana tak, by byÊ ≥atwo osadzalna, stabilna, mocna i wydajna
-pod wzglÍdem zasobÛw.
+%description -l pl.UTF-8
+Celem libmspack jest dostarczenie kompresor√≥w i dekompresor√≥w,
+archiwizer√≥w i dearchiwizer√≥w dla format√≥w kompresji u≈ºywanych przez
+Microsoft: CAB, CHM, HLP, KWAJ, LIT i SZDD. Ponadto biblioteka zosta≈Ça
+zaprojektowana tak, by byƒá ≈Çatwo osadzalna, stabilna, mocna i wydajna
+pod wzglƒôdem zasob√≥w.
 
 %package devel
 Summary:	Header files for libmspack library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki libmspack
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki libmspack
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for libmspack library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki libmspack.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki libmspack.
 
 %package static
 Summary:	Static libmspack library
-Summary(pl):	Statyczna biblioteka libmspack
+Summary(pl.UTF-8):   Statyczna biblioteka libmspack
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libmspack library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libmspack.
 
 %prep
