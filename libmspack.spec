@@ -1,5 +1,5 @@
 Summary:	A library for Microsoft compression formats
-Summary(pl.UTF-8):   Biblioteka do formatów kompresji używanych przez Microsoft
+Summary(pl.UTF-8):	Biblioteka do formatów kompresji używanych przez Microsoft
 Name:		libmspack
 Version:	0.0.20060920alpha
 Release:	1
@@ -26,7 +26,7 @@ pod względem zasobów.
 
 %package devel
 Summary:	Header files for libmspack library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libmspack
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libmspack
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -38,7 +38,7 @@ Pliki nagłówkowe biblioteki libmspack.
 
 %package static
 Summary:	Static libmspack library
-Summary(pl.UTF-8):   Statyczna biblioteka libmspack
+Summary(pl.UTF-8):	Statyczna biblioteka libmspack
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
