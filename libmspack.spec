@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# don't build static libraries
+#
 Summary:	A library for Microsoft compression formats
 Summary(pl.UTF-8):	Biblioteka do formatów kompresji używanych przez Microsoft
 Name:		libmspack
@@ -52,7 +56,8 @@ Statyczna biblioteka libmspack.
 %setup -q
 
 %build
-%configure
+%configure \
+	%{!?with_static_libs:--disable-static}
 %{__make}
 
 %install
@@ -79,6 +84,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libmspack.la
 %{_includedir}/mspack.h
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libmspack.a
+%endif
