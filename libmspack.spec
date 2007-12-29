@@ -6,7 +6,7 @@ Summary:	A library for Microsoft compression formats
 Summary(pl.UTF-8):	Biblioteka do formatów kompresji używanych przez Microsoft
 Name:		libmspack
 Version:	0.0.20060920alpha
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.kyz.uklinux.net/downloads/%{name}-%{version}.tar.gz
