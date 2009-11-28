@@ -15,6 +15,8 @@ URL:		http://www.kyz.uklinux.net/libmspack/
 BuildRequires:	gcc >= 5:3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%undefine	__cxx
+
 %description
 The purpose of libmspack is to provide compressors and decompressors,
 archivers and dearchivers for Microsoft compression formats: CAB, CHM,
