@@ -9,9 +9,9 @@ Version:	0.0.20060920alpha
 Release:	2
 License:	LGPL
 Group:		Libraries
-Source0:	http://www.kyz.uklinux.net/libmspack/%{name}-%{version}.tar.gz
+Source0:	http://www.cabextract.org.uk/libmspack/%{name}-%{version}.tar.gz
 # Source0-md5:	72003dfa5da2e843e3d5ae0c18f7c969
-URL:		http://www.kyz.uklinux.net/libmspack/
+URL:		http://www.cabextract.org.uk/libmspack/
 BuildRequires:	gcc >= 5:3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
