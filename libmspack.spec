@@ -5,12 +5,12 @@
 Summary:	A library for Microsoft compression formats
 Summary(pl.UTF-8):	Biblioteka do formatów kompresji używanych przez Microsoft
 Name:		libmspack
-Version:	0.0.20060920alpha
-Release:	2
+Version:	0.2alpha
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.cabextract.org.uk/libmspack/%{name}-%{version}.tar.gz
-# Source0-md5:	72003dfa5da2e843e3d5ae0c18f7c969
+# Source0-md5:	a51c65ba1dc9b53090d4e65e1f55d860
 URL:		http://www.cabextract.org.uk/libmspack/
 BuildRequires:	gcc >= 5:3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -81,7 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc doc/*.{html,css,png}
+%doc doc/*.html
 %attr(755,root,root) %{_libdir}/libmspack.so
 %{_libdir}/libmspack.la
 %{_includedir}/mspack.h
