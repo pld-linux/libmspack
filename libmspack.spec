@@ -5,12 +5,12 @@
 Summary:	A library for Microsoft compression formats
 Summary(pl.UTF-8):	Biblioteka do formatów kompresji używanych przez Microsoft
 Name:		libmspack
-Version:	0.2alpha
+Version:	0.3alpha
 Release:	1
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	http://www.cabextract.org.uk/libmspack/%{name}-%{version}.tar.gz
-# Source0-md5:	a51c65ba1dc9b53090d4e65e1f55d860
+# Source0-md5:	08d08455b6d58ea649b35febd23f6386
 URL:		http://www.cabextract.org.uk/libmspack/
 BuildRequires:	gcc >= 5:3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -20,15 +20,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 The purpose of libmspack is to provide compressors and decompressors,
 archivers and dearchivers for Microsoft compression formats: CAB, CHM,
-HLP, KWAJ, LIT and SZDD. It is also designed to be easily embeddable,
-stable, robust and resource-efficient.
+HLP, KWAJ, LIT, SZDD and WIM. It is also designed to be easily
+embeddable, stable, robust and resource-efficient.
 
 %description -l pl.UTF-8
 Celem libmspack jest dostarczenie kompresorów i dekompresorów,
 archiwizerów i dearchiwizerów dla formatów kompresji używanych przez
-Microsoft: CAB, CHM, HLP, KWAJ, LIT i SZDD. Ponadto biblioteka została
-zaprojektowana tak, by być łatwo osadzalna, stabilna, mocna i wydajna
-pod względem zasobów.
+Microsoft: CAB, CHM, HLP, KWAJ, LIT, SZDD i WIM. Ponadto biblioteka
+została zaprojektowana tak, by być łatwo osadzalna, stabilna, mocna i
+wydajna pod względem zasobów.
 
 %package devel
 Summary:	Header files for libmspack library
