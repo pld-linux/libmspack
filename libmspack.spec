@@ -6,7 +6,7 @@ Summary:	A library for Microsoft compression formats
 Summary(pl.UTF-8):	Biblioteka do formatów kompresji używanych przez Microsoft
 Name:		libmspack
 Version:	0.6alpha
-Release:	1
+Release:	2
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	https://www.cabextract.org.uk/libmspack/%{name}-%{version}.tar.gz
@@ -54,6 +54,19 @@ Static libmspack library.
 %description static -l pl.UTF-8
 Statyczna biblioteka libmspack.
 
+%package progs
+Summary:	MS expand-compatible, .cab and .chm decompressors
+Summary(pl.UTF-8):	Dekompresory do plików .cab, .chm i zgodnych z MS expand
+Group:		Applications/Archiving
+Requires:	%{name} = %{version}-%{release}
+
+%description progs
+Microsoft expand.exe-compatible, .cab and .chm file decompressors.
+
+%description progs -l pl.UTF-8
+Programy dekompresujące pliki .cab, .chm i zgodne z expand.exe
+Microsoftu.
+
 %prep
 %setup -q
 
@@ -77,10 +90,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
-%attr(755,root,root) %{_bindir}/cabrip
-%attr(755,root,root) %{_bindir}/chmextract
-%attr(755,root,root) %{_bindir}/msexpand
-%attr(755,root,root) %{_bindir}/oabextract
 %attr(755,root,root) %{_libdir}/libmspack.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libmspack.so.0
 
@@ -97,3 +106,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_libdir}/libmspack.a
 %endif
+
+%files progs
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/cabrip
+%attr(755,root,root) %{_bindir}/chmextract
+%attr(755,root,root) %{_bindir}/msexpand
+%attr(755,root,root) %{_bindir}/oabextract
