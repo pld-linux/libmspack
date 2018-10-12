@@ -6,13 +6,17 @@ Summary:	A library for Microsoft compression formats
 Summary(pl.UTF-8):	Biblioteka do formatów kompresji używanych przez Microsoft
 Name:		libmspack
 Version:	0.7.1alpha
-Release:	1
+Release:	2
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	https://www.cabextract.org.uk/libmspack/%{name}-%{version}.tar.gz
 # Source0-md5:	4fd625c993fb0dd548d02415dd09b6c0
+Patch0:		%{name}-deps.patch
 URL:		https://www.cabextract.org.uk/libmspack/
+BuildRequires:	autoconf >= 2.59
+BuildRequires:	automake
 BuildRequires:	gcc >= 5:3.0
+BuildRequires:	libtool >= 2:2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %undefine	__cxx
@@ -69,9 +73,16 @@ Microsoftu.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+%{__libtoolize}
+%{__aclocal} -I m4
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure \
+	--disable-silent-rules \
 	%{!?with_static_libs:--disable-static}
 %{__make}
 
