@@ -5,7 +5,7 @@
  
  bin_PROGRAMS = 		src/cabrip src/chmextract src/msexpand src/oabextract
 -include_HEADERS =	mspack/mspack.h
-+include_HEADERS =	mspack/mspack.h mspack/system.h
++include_HEADERS =	mspack/cab.h mspack/chm.h mspack/crc32.h mspack/des.h mspack/hlp.h mspack/kwaj.h mspack/lit.h mspack/lzss.h mspack/lzx.h mspack/mspack.h mspack/mszip.h mspack/oab.h mspack/qtm.h mspack/readbits.h mspack/readhuff.h mspack/sha.h mspack/system.h mspack/szdd.h
  lib_LTLIBRARIES =	libmspack.la
  
  noinst_LTLIBRARIES =	libmscabd.la libmschmd.la
