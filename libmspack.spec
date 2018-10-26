@@ -6,7 +6,7 @@ Summary:	A library for Microsoft compression formats
 Summary(pl.UTF-8):	Biblioteka do formatów kompresji używanych przez Microsoft
 Name:		libmspack
 Version:	0.8alpha
-Release:	2
+Release:	3
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	https://www.cabextract.org.uk/libmspack/%{name}-%{version}.tar.gz
@@ -113,8 +113,24 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libmspack.so
 %{_libdir}/libmspack.la
 %dir %{_includedir}/mspack
-%{_includedir}/mspack/system.h
+%{_includedir}/mspack/cab.h
+%{_includedir}/mspack/chm.h
+%{_includedir}/mspack/crc32.h
+%{_includedir}/mspack/des.h
+%{_includedir}/mspack/hlp.h
+%{_includedir}/mspack/kwaj.h
+%{_includedir}/mspack/lit.h
+%{_includedir}/mspack/lzss.h
+%{_includedir}/mspack/lzx.h
 %{_includedir}/mspack/mspack.h
+%{_includedir}/mspack/mszip.h
+%{_includedir}/mspack/oab.h
+%{_includedir}/mspack/qtm.h
+%{_includedir}/mspack/readbits.h
+%{_includedir}/mspack/readhuff.h
+%{_includedir}/mspack/sha.h
+%{_includedir}/mspack/system.h
+%{_includedir}/mspack/szdd.h
 %{_pkgconfigdir}/libmspack.pc
 
 %if %{with static_libs}
