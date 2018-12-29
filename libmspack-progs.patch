@@ -1,0 +1,16 @@
+--- libmspack-0.9.1alpha/Makefile.am.orig	2018-12-29 16:37:49.480165092 +0100
++++ libmspack-0.9.1alpha/Makefile.am	2018-12-29 17:04:27.293480182 +0100
+@@ -17,10 +17,11 @@
+ pkgconfig_DATA =        libmspack.pc
+ 
+ noinst_LTLIBRARIES =    libmscabd.la libmschmd.la
+-noinst_PROGRAMS =       examples/cabd_memory examples/cabrip examples/chmextract \
+-                        examples/msexpand examples/multifh examples/oabextract \
++noinst_PROGRAMS =       examples/cabd_memory \
++                        examples/multifh \
+                         test/cabd_md5 test/chmd_find test/chmd_md5 test/chmd_order \
+                         test/chminfo
++bin_PROGRAMS =          examples/cabrip examples/chmextract examples/msexpand examples/oabextract
+ check_PROGRAMS =        test/cabd_test test/chmd_test test/kwajd_test
+ 
+ libmspack_la_SOURCES =  mspack/mspack.h \

@@ -1,11 +1,10 @@
---- libmspack-0.8alpha/Makefile.am~	2018-10-16 12:07:28.000000000 +0200
-+++ libmspack-0.8alpha/Makefile.am	2018-10-23 21:11:11.477166014 +0200
-@@ -18,7 +18,8 @@
- AM_CPPFLAGS =		-I$(top_srcdir)/mspack -I$(top_srcdir)/test 
+--- libmspack-0.9.1alpha/Makefile.am.orig	2018-12-29 11:03:21.843727561 +0100
++++ libmspack-0.9.1alpha/Makefile.am	2018-12-29 11:08:59.620390371 +0100
+@@ -12,6 +12,7 @@
+ AM_CPPFLAGS =           -I$(srcdir)/mspack -I$(srcdir)/test
  
- bin_PROGRAMS = 		src/cabrip src/chmextract src/msexpand src/oabextract
- include_HEADERS =	mspack/mspack.h
+ include_HEADERS =       mspack/mspack.h
 +pkginclude_HEADERS =	mspack/cab.h mspack/chm.h mspack/crc32.h mspack/des.h mspack/hlp.h mspack/kwaj.h mspack/lit.h mspack/lzss.h mspack/lzx.h mspack/mszip.h mspack/oab.h mspack/qtm.h mspack/readbits.h mspack/readhuff.h mspack/sha.h mspack/system.h mspack/szdd.h
- lib_LTLIBRARIES =	libmspack.la
+ lib_LTLIBRARIES =       libmspack.la
+ pkgconfig_DATA =        libmspack.pc
  
- noinst_LTLIBRARIES =	libmscabd.la libmschmd.la
