@@ -1,7 +1,7 @@
---- libmspack-0.9.1alpha/Makefile.am.orig	2018-12-29 09:12:11.633803722 +0100
-+++ libmspack-0.9.1alpha/Makefile.am	2018-12-29 11:02:49.790394594 +0100
-@@ -56,36 +56,36 @@
-                         mspack/readbits.h mspack/readhuff.h
+--- libmspack-0.11alpha/Makefile.am.orig	2023-03-04 19:01:15.216016728 +0100
++++ libmspack-0.11alpha/Makefile.am	2023-03-04 19:02:59.028787660 +0100
+@@ -59,36 +59,36 @@ libmschmd_la_SOURCES =  mspack/mspack.h
+                         mspack/macros.h mspack/readbits.h mspack/readhuff.h
  libmschmd_la_LDFLAGS =  -export-symbols-regex '^mspack_'
  
 -examples_cabd_memory_SOURCES =  examples/cabd_memory.c libmscabd.la
