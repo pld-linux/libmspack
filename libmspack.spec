@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	static_libs	# don't build static libraries
+%bcond_without	static_libs	# static library
 #
 Summary:	A library for Microsoft compression formats
 Summary(pl.UTF-8):	Biblioteka do formatów kompresji używanych przez Microsoft
@@ -40,7 +40,7 @@ wydajna pod względem zasobów.
 Summary:	Header files for libmspack library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libmspack
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name}%{?_isa} = %{version}-%{release}
 
 %description devel
 Header files for libmspack library.
@@ -52,7 +52,7 @@ Pliki nagłówkowe biblioteki libmspack.
 Summary:	Static libmspack library
 Summary(pl.UTF-8):	Statyczna biblioteka libmspack
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
+Requires:	%{name}-devel%{?_isa} = %{version}-%{release}
 
 %description static
 Static libmspack library.
@@ -64,7 +64,7 @@ Statyczna biblioteka libmspack.
 Summary:	MS expand-compatible, .cab and .chm decompressors
 Summary(pl.UTF-8):	Dekompresory do plików .cab, .chm i zgodnych z MS expand
 Group:		Applications/Archiving
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name}%{?_isa} = %{version}-%{release}
 
 %description progs
 Microsoft expand.exe-compatible, .cab and .chm file decompressors.
@@ -96,6 +96,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsolted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libmspack.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -105,14 +108,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
-%attr(755,root,root) %{_libdir}/libmspack.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libmspack.so.0
+%{_libdir}/libmspack.so.*.*.*
+%ghost %{_libdir}/libmspack.so.0
 
 %files devel
 %defattr(644,root,root,755)
 %doc doc/*.html
-%attr(755,root,root) %{_libdir}/libmspack.so
-%{_libdir}/libmspack.la
+%{_libdir}/libmspack.so
 %{_includedir}/mspack.h
 # private headers, used by cabextract (see headers patch)
 %{_includedir}/libmspack
