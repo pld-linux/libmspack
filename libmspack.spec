@@ -5,12 +5,12 @@
 Summary:	A library for Microsoft compression formats
 Summary(pl.UTF-8):	Biblioteka do formatów kompresji używanych przez Microsoft
 Name:		libmspack
-Version:	0.11alpha
+Version:	0.12alpha
 Release:	1
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	https://www.cabextract.org.uk/libmspack/%{name}-%{version}.tar.gz
-# Source0-md5:	3e770746e8eebba9ac4ce965e69dd107
+# Source0-md5:	a6027c6ee2b48674973f773df6d24233
 Patch0:		%{name}-deps.patch
 Patch1:		%{name}-headers.patch
 Patch2:		%{name}-progs.patch
